@@ -1,0 +1,7 @@
+# Compiled binaries
+home_automation/home_automation
+
+# Temporary/editor files
+*.swp
+*.swo
+*~
