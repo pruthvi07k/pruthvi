@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070a0f">
+<title>PRUTHVI | Home Automation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="topbar">
+
+  <a class="brand" href="#">
+    <span class="mark">P</span>
+
+    <span>
+      <b>PRUTHVI</b>
+      <small>HOME AUTOMATION</small>
+    </span>
+  </a>
+
+  <div class="header-actions">
+
+    <div class="connection">
+      <i></i>
+      <span id="connectionText">Connecting...</span>
+    </div>
+
+    <button
+      id="themeButton"
+      class="icon-btn"
+      aria-label="Toggle theme">
+      ☾
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero section">
+
+  <div>
+
+    <p class="eyebrow">
+      SMART CONTROL CENTER
+    </p>
+
+    <h1>
+      Your home,<br>
+      <span>under control.</span>
+    </h1>
+
+    <p class="lead">
+      Control your connected devices through
+      PRUTHVI using Wi-Fi and the NodeMCU ESP8266.
+    </p>
+
+    <div class="hero-actions">
+
+      <button
+        id="allOn"
+        class="primary">
+        Turn All On
+      </button>
+
+      <button
+        id="allOff"
+        class="secondary">
+        Turn All Off
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="orb-wrap">
+
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+
+    <div class="orb">
+
+      <span>⌂</span>
+
+      <b id="counter">
+        0 / 3
+      </b>
+
+      <small>
+        DEVICES ON
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     DEVICES
+========================= -->
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <p class="eyebrow">
+        DEVICES
+      </p>
+
+      <h2>
+        Connected devices
+      </h2>
+
+    </div>
+
+    <span>
+      3 devices
+    </span>
+
+  </div>
+
+
+  <div class="devices">
+
+
+    <!-- LED -->
+
+    <article
+      class="device"
+      data-id="led"
+      data-on="LED_ON"
+      data-off="LED_OFF">
+
+      <div class="device-top">
+
+        <div class="device-icon">
+          💡
+        </div>
+
+        <button
+          class="more"
+          type="button">
+          •••
+        </button>
+
+      </div>
+
+
+      <div class="title-row">
+
+        <div>
+
+          <h3>
+            LED
+          </h3>
+
+          <p>
+            Room Light
+          </p>
+
+        </div>
+
+
+        <div class="badge">
+
+          <i></i>
+
+          <b>
+            OFF
+          </b>
+
+        </div>
+
+      </div>
+
+
+      <div class="power">
+
+        <div></div>
+
+        <span>
+          0%
+        </span>
+
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          class="on"
+          type="button">
+          ON
+        </button>
+
+        <button
+          class="off"
+          type="button">
+          OFF
+        </button>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- RELAY 1 -->
+
+    <article
+      class="device"
+      data-id="bulb1"
+      data-on="RELAY1_ON"
+      data-off="RELAY1_OFF">
+
+      <div class="device-top">
+
+        <div class="device-icon">
+          ◉
+        </div>
+
+        <button
+          class="more"
+          type="button">
+          •••
+        </button>
+
+      </div>
+
+
+      <div class="title-row">
+
+        <div>
+
+          <h3>
+            Bulb 1
+          </h3>
+
+          <p>
+            Relay Channel 1
+          </p>
+
+        </div>
+
+
+        <div class="badge">
+
+          <i></i>
+
+          <b>
+            OFF
+          </b>
+
+        </div>
+
+      </div>
+
+
+      <div class="power">
+
+        <div></div>
+
+        <span>
+          0%
+        </span>
+
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          class="on"
+          type="button">
+          ON
+        </button>
+
+        <button
+          class="off"
+          type="button">
+          OFF
+        </button>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- RELAY 2 -->
+
+    <article
+      class="device"
+      data-id="bulb2"
+      data-on="RELAY2_ON"
+      data-off="RELAY2_OFF">
+
+      <div class="device-top">
+
+        <div class="device-icon">
+          ◉
+        </div>
+
+        <button
+          class="more"
+          type="button">
+          •••
+        </button>
+
+      </div>
+
+
+      <div class="title-row">
+
+        <div>
+
+          <h3>
+            Bulb 2
+          </h3>
+
+          <p>
+            Relay Channel 2
+          </p>
+
+        </div>
+
+
+        <div class="badge">
+
+          <i></i>
+
+          <b>
+            OFF
+          </b>
+
+        </div>
+
+      </div>
+
+
+      <div class="power">
+
+        <div></div>
+
+        <span>
+          0%
+        </span>
+
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          class="on"
+          type="button">
+          ON
+        </button>
+
+        <button
+          class="off"
+          type="button">
+          OFF
+        </button>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTROLLER + ACTIVITY
+========================= -->
+
+<section class="dashboard section">
+
+
+  <!-- CONTROLLER -->
+
+  <article class="panel">
+
+    <div class="section-head">
+
+      <div>
+
+        <p class="eyebrow">
+          CONTROLLER
+        </p>
+
+        <h2>
+          NodeMCU ESP8266
+        </h2>
+
+      </div>
+
+      <span class="ready">
+        <i></i>
+        WI-FI READY
+      </span>
+
+    </div>
+
+
+    <div class="controller">
+
+      <strong>
+        ESP-12E
+      </strong>
+
+      <div>
+
+        <b>
+          Wi-Fi Controller
+        </b>
+
+        <small>
+          PRUTHVI local hardware interface
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div>
+
+        <small>
+          IP
+        </small>
+
+        <b>
+          10.62.156.207
+        </b>
+
+      </div>
+
+
+      <div>
+
+        <small>
+          PROTOCOL
+        </small>
+
+        <b>
+          HTTP
+        </b>
+
+      </div>
+
+
+      <div>
+
+        <small>
+          NETWORK
+        </small>
+
+        <b>
+          Wi-Fi
+        </b>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- ACTIVITY -->
+
+  <article class="panel">
+
+    <div class="section-head">
+
+      <div>
+
+        <p class="eyebrow">
+          ACTIVITY
+        </p>
+
+        <h2>
+          Recent actions
+        </h2>
+
+      </div>
+
+      <button
+        id="clear"
+        class="clear"
+        type="button">
+        Clear
+      </button>
+
+    </div>
+
+
+    <div
+      id="activity"
+      class="activity">
+
+      <div class="empty">
+        ◎
+        <span>
+          No actions yet
+        </span>
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =========================
+     QUICK CONTROL
+========================= -->
+
+<section class="section quick">
+
+  <div class="section-head">
+
+    <div>
+
+      <p class="eyebrow">
+        QUICK CONTROL
+      </p>
+
+      <h2>
+        System actions
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="quick-grid">
+
+
+    <button
+      id="refresh"
+      class="quick-card"
+      type="button">
+
+      ↻
+
+      <span>
+
+        <b>
+          Refresh
+        </b>
+
+        <small>
+          Read ESP8266 device states
+        </small>
+
+      </span>
+
+    </button>
+
+
+
+    <button
+      id="demo"
+      class="quick-card"
+      type="button">
+
+      ▶
+
+      <span>
+
+        <b>
+          Demo Mode
+        </b>
+
+        <small>
+          Test connected devices
+        </small>
+
+      </span>
+
+    </button>
+
+
+
+    <button
+      id="reset"
+      class="quick-card"
+      type="button">
+
+      ↺
+
+      <span>
+
+        <b>
+          All Devices OFF
+        </b>
+
+        <small>
+          Turn connected devices off
+        </small>
+
+      </span>
+
+    </button>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <b>
+    PRUTHVI
+  </b>
+
+  <span>
+    Home Automation • ESP8266 Wi-Fi Controller
+  </span>
+
+</footer>
+
+
+
+<!-- =========================
+     TOAST
+========================= -->
+
+<div
+  id="toast"
+  class="toast">
+
+  ✓
+
+  <span>
+    Ready
+  </span>
+
+</div>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
